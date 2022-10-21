@@ -2,13 +2,13 @@
 
 EXEMPLO DE ORQUESTRAÇAO USANDO O KUBERNETES
 
-Executar o Deployment 
+<b>Executar o Deployment</b> </br>
 kubectl apply -f simpleApp.yaml  
 
-Criar o Service 
+<b>Criar o Service </b> </br>
 kubectl apply -f simpleAppsvc.yaml  
 
-Criar o HPA
+<b>Criar o HPA</b> </br>
 kubectl apply -f simpleApphpa.yaml   
 
 
@@ -20,11 +20,11 @@ kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin
 
 PARA SUBIR UM NGINX E EXPOR UMA APP PARA EM UM IP E PORTA
 
-Criar o deployment
+<b>Criar o deployment</b> </br>
 kubectl create -f nginxdeployment.yaml
 
-Criar o Service
+<b>Criar o Service</b> </br>
 kubectl create -f nginxservice.yaml
 
-Criar o auto-scale
+<b>Criar o auto-scale</b> </br>
 autoscale deployment nginxdeployment --cpu-percent=50 --min=1 --max=10
